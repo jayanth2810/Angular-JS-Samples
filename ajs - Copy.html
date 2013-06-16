@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html ng-app>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+<script src="control.js"></script>
+<title>Angular js example</title>
+<link href="bootstrap-master/docs/assets/css/bootstrap.css" rel="stylesheet">
+<link href="ajs.css" rel="stylesheet">
+</head>
+
+<body ng-controller="control">
+<form class="form-horizontal">
+
+<fieldset>
+          <legend>Connectivity Check</legend>
+          <div class="control-group">
+            <label class="control-label" id="host" for="input01">Host Address</label>
+            <div class="controls">
+              <input type="text" id="inp" ng-model="val" placeholder="enter server address"/>&nbsp;&nbsp;{{nohost}}
+			 </div>
+		</div>		
+ 
+		
+            <button type="button" id="b1" class="btn btn-primary" ng-click="func()">{{btext}}</button>
+
+<legend id="re">Result</legend>
+<fieldset>
+<div id="st">Status&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{result}}&nbsp;&nbsp;<i class="{{imgresult}}"></i></div>
+<div id="tw">Possible &nbsp;: {{two}}</div>
+<div id="er">Error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{error}}</div>
+</fieldset>
+
+</fieldset>
+</form>
+ 
+</body>
+</html>
+
+<!-- <div>{{info.length}}</div> -->
+<!--<input type="checkbox" value="am i" checked="checked" />-->
+<!-- <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </li>
+ -->
+<!--  <ul>
+<li ng-repeat="inf in info">
+<input type="checkbox" checked={{inf.done}} />{{inf.task}}<br>
+</li>
+</ul>
+ -->
